@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+    <link rel="stylesheet" href="./Styles.css">
+</head>
+<body>
+    <!-- Encabezado de mi página -->
+    <header>
+        <img src="img/Index/HTML5.png" alt="Logo de mi página" width="350px">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./Estructuras.html">Estructuras</a></li>
+                <li><a href="./Titulos.html">Titulos</a></li>
+                <li>Textos</li>
+                <li><a href="./Tablas.html">Tablas</a></li>
+                <li><a href="./Formularios.html">Formularios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cuerpo de mi página -->
+    <section>
+        <h1 id="Etiqueta 1">Textos de HTML</h1>
+        <img src="./img/Textos/Etiquetas.jpg" alt="Etiquetas" width="400px">
+        <article>
+        <p>A grandes rasgos, en un documento HTML existen dos tipos de etiquetas HTML: las etiquetas que contienen fragmentos de texto (se utilizan para dar significado a esas palabras o fragmentos) y las etiquetas que agrupan conjunto de información (fragmentos de texto y/u otras etiquetas).</p>
+        <p>En el siguiente ejemplo, tenemos la etiqueta "p", que pertenece al segundo grupo (agrupación), mientras que la etiqueta "strong" forma parte del primer grupo, que es del que vamos a hablar en esta sección:</p>
+        <img src="./img/Textos/Ejemplo 1.PNG" alt="Ejemplo 1">
+
+        <h2>Fragmentos de texto</h2>
+        <p>En primer lugar, existe una serie de etiquetas HTML simples para seleccionar un fragmento de texto y dotarlo de un significado especial. Por ejemplo:</p>
+        <img src="./img/Textos/Ejemplo 2.PNG" alt="Ejemplo 2">
+        <p>Ojo, algunas de estas etiquetas, en versiones anteriores de HTML tenían un significado diferente, como por ejemplo la etiqueta "b", que antiguamente simbolizaba un fragmento de texto en negrita o la etiqueta "i", que representaba un fragmento de texto en cursiva.</p>
+        <p>Por su parte, la etiqueta "span" es una versión en linea de la etiqueta "div", ya que su misión es agrupar contenido de texto, mientras que la misión del "div" es agrupar otras etiquetas HTML que a su vez pueden agrupar otras y otras etiquetas HTML.</p>
+
+        <h2>Modificación de significado </h2>
+        <p>Con las siguientes etiquetas HTML también podemos modificar el significado de la información que contienen:</p>
+        <img src="./img/Textos/Ejemplo 3.PNG" alt="Ejemplo 3">
+        <p>Las etiquetas HTML "sup" y "sub" se utilizan para indicar superíndices y subíndices. De esta forma tenemos un mecanismo que nos permite diferenciar el número 242 del número 24<sup>2</sup>:</p>
+        <img src="./img/Textos/Ejemplo 4.PNG" alt="Ejemplo 4">
+        <p>Por otra parte, la etiqueta HTML "q" nos permite hacer referencia a una cita o frase extraída de otro contexto. Obsérvese que en esta etiqueta disponemos de un atributo opcional cite, mediante el cuál podemos hacer referencia a una URL (en este caso a la ficha de la película de Batman) que en este caso es de donde procede la frase:</p>
+        <img src="./img/Textos/Ejemplo 5.PNG" alt="Ejemplo 5">
+        <p>Es importante tener en cuenta que no se trata de la creación de un enlace para que el usuario haga clic, ya que estos se crean mediante la etiqueta "a" que veremos más adelante.</p>
+        <p>También tenemos las etiquetas "dfn" y "abbr" que nos permiten indicar definiciones y abreviaturas, y que ambas permiten el uso del atributo opcional title para indicar el significado de dicho término o abreviatura. Un ejemplo de ambas etiquetas combinadas:</p>
+        <img src="./img/Textos/Ejemplo 6.PNG" alt="Ejemplo 6">
+        <p>Los saltos de línea son etiquetas especiales de HTML para comenzar en una línea nueva (emular el efecto al pulsar ENTER). Al contrario que todas las que hemos visto, las etiquetas "br" son etiquetas que no necesitan etiqueta de cierre, por lo que sólo se escribe la etiqueta de apertura.</p>
+        <img src="./img/Textos/Ejemplo 7.PNG" alt="Ejemplo 7">
+        <p>También existe la etiqueta "wbr" que se denomina oportunidad de salto de línea y posee el mismo funcionamiento de la división silábica con guión, es decir, indicamos donde es posible hacer un salto de línea si la situación lo requiere, como por ejemplo, si la palabra no cabe dentro de un elemento y se quiere evitar que desborde el contenido.</p>
+
+        <h2>Aspectos informáticos</h2>
+        <p>Existen una serie de etiquetas HTML ligeramente orientadas a aspectos informáticos como combinaciones de teclado del usuario o para representar variables matemáticas o informáticas:</p>
+        <img src="./img/Textos/Ejemplo 8.PNG" alt="Ejemplo 8">
+        <p>Un ejemplo práctico de la etiqueta "kbd" sería modificar sus estilos CSS para obtener algo similar a CTRL+T, simplemente combinando el siguiente código HTML y CSS:</p>
+        <img src="./img/Textos/Ejemplo 9.PNG" alt="Ejemplo 9">
+        <p>Si "kbd" muestra una entrada, por otro lado tenemos la etiqueta inversa, "samp", que muestra la salida de un programa (mensaje, error o información) o "var" que nos permite indicar variables utilizadas en ejemplos matemáticos o informáticos.</p>
+        <p>Con la etiqueta "time" podemos indicar una fecha y/o hora en formato legible para humanos, indicando de forma opcional el atributo datetime con la fecha en un formato orientado a máquinas. De la misma forma se utiliza la etiqueta "data" para información genérica, en la que se puede usar su atributo value para indicar el texto equivalente orientado a máquinas:</p>
+        <img src="./img/Textos/Ejemplo 10.PNG" alt="Ejemplo 10">
+        <p>Nótese también que la etiqueta "code" se utiliza para fragmentos de código fuente cortos, en línea, o lo que es lo mismo, de una sola línea. Para bloques de código más extensos se usa combinándola con otra etiqueta que veremos más adelante.</p>
+
+        <h2>Etiquetas de edición</h2>
+        <p>Por último, tenemos unas etiquetas orientadas a la edición posterior a la publicación de un texto o página web:</p>
+        <img src="./img/Textos/Ejemplo 11.PNG" alt="Ejemplo 11">
+        <p>Imaginemos que publicamos una página pero queremos editar la publicación para modificar o añadir información (o simplemente corregir errores), pero queremos reflejar esos cambios para que se vean que han sido insertados a posteriori.</p>
+        <p>Para ello podemos utilizar la etiqueta "ins", pudiendo asociarle unos estilos CSS determinados. De la misma forma, podemos utilizar "del" para la eliminación de información sin eliminarla por completo, sino que aparezca tachada o con algún estilo visual que sugiera que ya no es válida (en gris y tachada, por ejemplo).</p>
+        <p>Ambas etiquetas admiten el uso de los atributos opcionales cite, que permite incluir una URL con más información sobre la información añadida/eliminada (idéntico al atributo cite de la etiqueta q) y datetime, que permite incluir la fecha/hora cuando se añadió/eliminó la información (funcionamiento idéntico al atributo datetime de la etiqueta time).</p>
+        </article>
+    </section>
+
+    <!-- Contenido adicional de mi página -->
+    <aside>
+        <h2 id="publicidad">Publicidad</h2>
+        <img src="./img/Index/Cerdito Chef.PNG" alt="Cerdito Chef">
+        <P>lechona la buena onda</P>
+        <br>
+        <img src="./img/Index/Cerveza.PNG" alt="Cerveza">
+
+    </aside>
+
+    <!-- Pie de página de mi página -->
+    <footer>
+        <h4>Invitación</h4>
+        <p>Oktober fest, festival de cerveza</p>
+        <small>Derechos reservados &copy; - 2022 - Brayan Stick Barrero</small>
+    </footer>
+</body>
+</html>

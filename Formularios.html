@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+    <link rel="stylesheet" href="./Styles.css">
+</head>
+<body>
+    <!-- Encabezado de mi página -->
+    <header>
+        <img src="img/Index/HTML5.png" alt="Logo de mi página" width="350px">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./Estructuras.html">Estructuras</a></li>
+                <li><a href="./Titulos.html">Titulos</a></li>
+                <li><a href="./Textos.html">Textos</a></li>
+                <li><a href="./Tablas.html">Tablas</a></li>
+                <li>Formularios</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cuerpo de mi página -->
+    <section>
+        <h1>Formularios de HTML</h1>
+        <img src="./img/Formularios/Formulario 1.PNG" alt="Formulario 1" width="300px">
+        <article>
+        <p>HTML5 proporciona una serie de etiquetas interesantes para utilizar en formularios (además de las ya existentes en versiones anteriores). Los formularios son una forma sencilla de establecer mecanismos para que el usuario pueda introducir información en una página web de forma sencilla e intuitiva, y el sitio web sea capaz de procesarla correctamente y añadirla en una base de datos de la página, enviarla por email o procesarla para mostrar información final al usuario.</p>
+        <p>Nuestros objetivos al crear un formulario HTML5 deben ser los siguientes:</p>
+        <ul>
+            <li>Hacer lo más sencillo posible el proceso de inserción de datos por parte del usuario.</li>
+            <li>Intentar que la experiencia de usuario sea lo más agradable posible.</li>
+            <li>Intentar que los datos introducidos estén en un formato predecible y esperado.</li>
+            <li>Reducir los errores al introducir datos en la medida de lo posible.</li>
+            <li>Comunicar claramente si ocurren errores al introducir datos.</li>
+        </ul>
+
+        <h2>Contenedor de formulario</h2>
+        <p>Para comenzar con la creación de un formulario, el primer paso es indicar una etiqueta contenedora "form", que incluirá toda la información que se quiere recoger en ese formulario:</p>
+        <img src="./img/Formularios/Formulario 2.PNG" alt="Formulario 2">
+        <p>De esta forma, se puede incluso crear varias etiquetas "form" por página, pudiendo así crear varios formularios diferentes, como por ejemplo, uno para realizar una búsqueda en la página, otro para dejar un comentario y otro para enviar un email al autor.</p>
+        <p>La etiqueta "form" dispone de varios atributos para utilizar:</p>
+        <img src="./img/Formularios/Formulario 3.PNG" alt="Formulario 3">
+        <p>Así pues, un primer formulario base de ejemplo (aún vacío, sin campos de entrada de datos, sólo con la etiqueta contenedora) podría ser el que vemos en el siguiente ejemplo:</p>
+        <img src="./img/Formularios/Formulario 4.PNG" alt="Formulario 4">
+        <p>Nótese que se definen 3 atributos base en "form":</p>
+        <ul>
+            <li>En action se indica la dirección donde se enviarán los datos cuando el usuario pulse el botón de enviar. En caso de omitirse esta información, se enviarían los datos a la propia página actual, volviéndola a cargar.</li>
+            <li>En method se define el tipo de método HTTP a utilizar. Utilizaremos el método GET cuando nos interese que los datos se envíen en la propia URL. En caso contrario, POST.</li>
+            <li>En name el nombre del formulario para cuando necesitemos hacer referencia a él (generalmente desde Javascript o desde backend).</li>
+        </ul>
+
+        <h2>Tipos de datos</h2>
+        <p>Para que un usuario pueda introducir información en un formulario, requiere que se le indiquen una serie de campos que le permitan introducir la información de la forma más cómoda y rápida posible. Para ello, debemos saber a priori que tipo de dato le vamos a pedir al usuario (texto, numérico, fecha, etc...), y así saber que tipo de campo de entrada de datos es más conveniente colocar.</p>
+        <img src="./img/Formularios/Formulario 5.PNG" alt="Formulario 5">
+        <p>En HTML5, de forma nativa, el navegador proporciona estos campos de entrada en los que el usuario puede introducir información específica. Cada uno de ellos tiene sus propias particularidades y características, además de que hay que tener cuidado con algunos, ya que pueden no estar soportados por completo en todos los navegadores.</p>
+
+        <h2>Campos de entrada</h2>
+        <p>Una de las etiquetas que más utilizaremos para obtener información a modo de campo de entrada de datos en un formulario es la etiqueta "input". Su funcionalidad más utilizada es la de servir como campo de texto:</p>
+        <img src="./img/Formularios/Formulario 6.PNG" alt="Formulario 6">
+        <p>En este ejemplo tenemos un pequeño formulario donde se le pide al usuario su nombre con la etiqueta " input type="text" " y, posteriormente, se coloca un botón para enviar el formulario con la etiqueta "input type="submit" ". Aunque vemos que se trata de la misma etiqueta "input", dependiendo del valor indicado en el atributo type realizará una tarea u otra.</p>
+
+        <h2>La etiqueta "input"</h2>
+        <p>La etiqueta "input" tiene una gran cantidad de atributos (algunos dependiendo del valor de type, que mostraremos más adelante). Estos son los atributos que podemos utilizar de forma general para prácticamente cualquier campo de entrada de datos con la etiqueta "input":</p>
+        <img src="./img/Formularios/Formulario 7.PNG" alt="Formulario 7">
+        <p>El atributo type nos permitirá indicar que tipo de campo de dato mostrará en el navegador (text, number, date... los veremos más adelante). Mediante el atributo name le daremos un nombre al campo de texto, así cuando enviemos la información del formulario, podremos manejarla desde javascript o desde el back-end haciendo referencia a dicho nombre.</p>
+
+
+
+            <fieldset>
+                <legend><h3>Ejemplo de un Formulario Funcional</h3></legend>
+                <form action="" method="post" enctype="multipart/form-data">
+                    <div>
+                        <label for="nombre">Nombres y apellidos completos</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombres y apellidos">
+                    </div>
+                    <div>
+                        <label for="telefono">Número celular</label>
+                        <input type="tel" name="telefono" id="telefono" placeholder="Número celular">
+                    </div>
+                    <div>
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" name="correo" id="correo" placeholder="correo@ejemplo.com">
+                    </div>
+                    <div>
+                        <label for="archivo">Subir archivo</label>
+                        <input type="file" name="archivo" id="archivo">
+                    </div>
+                    <div>
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" name="contrasena" id="contrasena">
+                    </div>
+                    <div>
+                        <input type="reset" value="Borrar">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </fieldset>
+        </article>
+    </section>
+
+    <!-- Contenido adicional de mi página -->
+    <aside>
+        <h2 id="publicidad">Publicidad</h2>
+        <img src="./img/Index/Cerdito Chef.PNG" alt="Cerdito Chef">
+        <P>lechona la buena onda</P>
+        <br>
+        <img src="./img/Index/Cerveza.PNG" alt="Cerveza">
+
+    </aside>
+
+    <!-- Pie de página de mi página -->
+    <footer>
+        <h4>Invitación</h4>
+        <p>Oktober fest, festival de cerveza</p>
+        <small>Derechos reservados &copy; - 2022 - Brayan Stick Barrero</small>
+    </footer>
+</body>
+</html>
